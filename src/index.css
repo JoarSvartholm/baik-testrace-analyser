@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  border-radius: 0  0 10px 10px;
+  padding-left: 10px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+li a:hover{
+  background-color: #111;
+}
+
+
+.content {
+  font-size: large;
+}
+
+.container{
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
+}
