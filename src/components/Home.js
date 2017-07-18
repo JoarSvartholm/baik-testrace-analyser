@@ -5,6 +5,9 @@ export class Home extends React.Component{
     return(
       <div>
         <h1>Home</h1>
+        <pre>
+          Detta är bara startsidan :)
+        </pre>
       </div>
     )
   }

@@ -2,9 +2,10 @@ import React from 'react';
 import {Route} from 'react-router-dom';
 import {Header} from "./Header";
 
-
+//components
 import {Home} from './Home';
-import {User} from './User';
+import {NewEntry} from './NewEntry';
+import {Analys} from './Analys';
 
 export class Root extends React.Component {
   render(){
@@ -14,8 +15,8 @@ export class Root extends React.Component {
       <hr />
       <div className="content">
         <Route exact path="/" component={Home} />
-        <Route path="/user" component={User} />
-        <Route path="/home" component={Home} />
+        <Route path="/newEntry" component={NewEntry} />
+        <Route path="/Analys" component={Analys} />
       </div>
     </div>
   )
