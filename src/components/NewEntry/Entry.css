@@ -1,0 +1,12 @@
+.EntryHolder{
+  font-size: 14px;
+  margin: 0 auto;
+  width:100%;
+  max-width: 250px;
+}
+.foundEntry{
+  float: right;
+}
+.labelHolder   {
+width: 24%;
+}

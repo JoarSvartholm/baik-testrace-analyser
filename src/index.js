@@ -13,10 +13,8 @@ import * as firebase from 'firebase';
 import config from './auth';
 firebase.initializeApp(config);
 
-
-
 class App extends React.Component {
-  
+
   render() {
     return (
       <Router >
