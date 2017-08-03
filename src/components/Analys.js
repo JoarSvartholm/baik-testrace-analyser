@@ -23,8 +23,8 @@ export class Analys extends React.Component{
       this.setState({
         track: snap.val()
       })
-      const values = this.state.track.mattsund.distances.map((number) =>
-        console.log({number}))
+/*      const values = this.state.track.mattsund.distances.map((number) =>
+        console.log({number}))*/
 
     })
   }
