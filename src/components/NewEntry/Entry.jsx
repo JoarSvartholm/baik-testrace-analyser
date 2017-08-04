@@ -8,7 +8,7 @@ export class Entry extends React.Component{
   constructor(){
     super();
     this.state = {
-      value: ''
+      value: '     '
   }
   this.onTimeChangeHandler = this.onTimeChangeHandler.bind(this);
   }
@@ -30,8 +30,8 @@ onChanges(time){
     return(
       <div className="EntryHolder">
 
-        {this.props.checkpoint} :
-        <TimeInput  mountFocus='true'
+        Kontroll {this.props.checkpoint} :
+        <TimeInput className='TimeInputHolder'  mountFocus='true'
    			onTimeChange={this.onTimeChangeHandler}  />
 
         <div className="foundEntry">{this.state.value}</div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'moment';
 //import * as firebase from 'firebase';
 
 
@@ -15,11 +16,11 @@ export class NewEntry extends React.Component{
     console.log(mattsundRef)*/
     this.state={
       option: 'ormberget',
-      cpts: 8
+      cpts: 8,
+      date: Moment()
     }
   }
   trackChange(e){
-
     this.setState({
       option: e.target.value
     })
@@ -33,10 +34,14 @@ export class NewEntry extends React.Component{
         cpts: 3
       })
     }
-
+  }
+  dateChange(e){
+    this.setState({
+      date: e
+    })
+    console.log(this.state.date._d)
 
   }
-
   render(){
     var inputs = []
     for (var i=1; i <= this.state.cpts; i++) {
@@ -48,7 +53,7 @@ export class NewEntry extends React.Component{
         <h1>Lägg till nytt test</h1>
         <div>
           <SelectTrack option={this.state.option} onChange ={this.trackChange.bind(this)} />
-          <DatePick  />
+          <DatePick onChange={this.dateChange.bind(this)} startDate={this.state.date}  />
 
           {inputs}
 

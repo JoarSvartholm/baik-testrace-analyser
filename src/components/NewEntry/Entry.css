@@ -5,6 +5,14 @@
   margin: 0 auto;
   width:100%;
   max-width: 250px;
+  display: flex;
+  flex-direction: row;
+}
+.TimeInputHolder{
+  width:50%;
+  max-width: 45px;
+  display: flex;
+  flex-direction: row;
 }
 .foundEntry{
   float: right;

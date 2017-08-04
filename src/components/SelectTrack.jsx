@@ -10,7 +10,6 @@ export class SelectTrack extends Component {
         <option value='mattsund'>Måttsund</option>
       </select>
       </div>
-
     )
   }
 }
