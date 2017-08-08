@@ -7,10 +7,12 @@ export class DatePick extends React.Component {
     return (
         <div className="EntryHolder">
           Datum :
-      <div className="TimeInputHolder"> <DatePicker
+      <div className="DateInputHolder"> <DatePicker
         selected={this.props.startDate}
         onChange={this.props.onChange.bind(this)}
-        dateFormat='LL'
+        dateFormat='YYYY-MM-DD'
+        isClearable={true}
+        withPortal
     /></div>
 </div>
 )

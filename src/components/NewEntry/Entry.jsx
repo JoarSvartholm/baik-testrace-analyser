@@ -2,7 +2,7 @@ import React from 'react';
 import './Entry.css';
 import TimeInput from 'react-time-input';
 
-
+import img from './checkImg.png'
 
 export class Entry extends React.Component{
   constructor(){
@@ -12,29 +12,26 @@ export class Entry extends React.Component{
   }
   this.onTimeChangeHandler = this.onTimeChangeHandler.bind(this);
   }
-  changeState(e){
-    this.setState({
-      value: e.target.value
-    })
-  }
+
   onTimeChangeHandler(val){
     this.setState({
       value: val
     })
 }
-onChanges(time){
-    console.log(time);
-    this.setState({ value: time });
-  }
+
   render(){
     return(
       <div className="EntryHolder">
 
         Kontroll {this.props.checkpoint} :
         <TimeInput className='TimeInputHolder'  mountFocus='true'
-   			onTimeChange={this.onTimeChangeHandler}  />
+   			onTimeChange={this.props.onChange.bind(this)}  />
 
-        <div className="foundEntry">{this.state.value}</div>
+      <div className="foundEntry">
+        { this.props.done ? (
+            <img style={{width: 20, height: 20}} src={img} alt='done' />
+          ) : null }
+      </div>
 
       </div>
     )
